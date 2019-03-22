@@ -1,1 +1,2 @@
-# bot-owner-2
+# mykingbot
+King Bot
