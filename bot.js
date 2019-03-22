@@ -216,7 +216,7 @@ client.on('message', function(msg) {
             text = co.first().content
 
               message.channel.send(`تم حفظ اقتراحك الرجاء انتضار الرد من قبل الاداره`)
-                client.channels.get("558297515582160897").send(`${message.author.username}'s sug => ${text}`)
+                client.channels.get("558191646857101354").send(`${message.author.username}'s sug => ${text}`)
 
               })
             }
@@ -243,17 +243,13 @@ ${prefix}public ⥨ الاوامر العامة
 ${prefix}admin ⥨ اوامر الادارة
 			 
 ${prefix}games ⥨ اوامر الالعاب
-
-${prefix}music ⥨ اوامر الموسيقى
-
 Other Commands:
-
-
-${prefix}invite ⥨ لدعوة البوت الى سيرفرك
+${prefix}inv ⥨ لدعوة البوت الى سيرفرك
 
 ${prefix}support ⥨ لدخول سيرفر الدعم
 
-رابط البوت:https://discordapp.com/oauth2/authorize?client_id=558298401004060673&permissions=8&scope=bot
+رابط البوت:https://discordapp.com/api/oauth2/authorize?client_id=558613835435474954&permissions=8&scope=bot
+
 
 	  `)
    message.channel.sendEmbed(embed)
@@ -305,7 +301,7 @@ client.on('guildCreate', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("RED")
      .setTitle('Click Here To The Add Bot .!')
-     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=558298401004060673&permissions=8&scope=bot')
+     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=558613835435474954&permissions=8&scope=bot')
   .setDescription(`**
   Someone Added Me ✅
 اسم السيرفر: ${guild.name}
@@ -317,7 +313,7 @@ client.on('guildDelete', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("GOLD")
      .setTitle('Click Here To The Add Bot .!')
-     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=558298401004060673&permissions=8&scope=bot')
+     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=558613835435474954&permissions=8&scope=bot')
   .setDescription(`**
   I Got Kicked :cry:
 اسم السيرفر: ${guild.name}
@@ -330,7 +326,7 @@ client.channels.get("470259562121920512").sendEmbed(embed)
 
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = ['In 77 Server','*help | *invite','In 77 Server','*help | *invite','In 77 Server'];
+    var setGame = ['#help | #invite'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -460,7 +456,7 @@ client.on('message', function(message) {
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
-            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+            if(!args) return message.reply('اكتب الاسم اللي تريدها.');
         client.user.setUsername(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
            msg.delete(5000);
@@ -494,7 +490,7 @@ client.on('message', function(message) {
 				        if(message.author.id !== myID) return;
         client.user.setAvatar(args);
         message.channel.send(':white_check_mark: Done!').then(msg => {
-                if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+                if(!args) return message.reply('اكتب رابط الصورهاللي تريدها.');
            msg.delete(5000);
           message.delete(5000);
         });
@@ -798,7 +794,7 @@ if (message.content.startsWith(prefix + 'trans')) {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" ** :scales:سيرفر الدعم:scales:  **" , "  **https://discord.gg/6svmrx**")
+  .addField(" ** :scales:سيرفر الدعم:scales:  **" , "  **https://discord.gg/uc7Q9u**")
      
      
   message.channel.sendEmbed(embed);
@@ -813,7 +809,8 @@ client.on('message', message => {
                 if(message.content === prefix + "invite") {
                     let embed = new Discord.RichEmbed ()
                     embed.setTitle("**:point_right: Click Here**")
-                  .setFooter(`bot owner `,'https://discordapp.com/api/oauth2/authorize?client_id=558298401004060673&permissions=8&scope=bot')
+                  .setFooter(`bot owner `,'https://discordapp.com/api/oauth2/authorize?client_id=558613835435474954&permissions=8&scope=bot
+')
                   .setURL("https://goo.gl/ADmgeW");
                    message.channel.sendEmbed(embed);
                   }
@@ -897,7 +894,7 @@ client.on('message', message => {
    
    client.on('message', message => {
 
-    if (message.content.startsWith("#link")) {        
+    if (message.content.startsWith("رابط")) {        
   message.channel.createInvite({
         thing: true,
         maxUses: 100,
@@ -1318,7 +1315,7 @@ if (message.content.startsWith("#add.r")) {
 var AsciiTable = require('ascii-data-table').default
 client.on('message', message =>{
 
-    if(message.content == "*roles"){
+    if(message.content == "#roles"){
         var 
         ros=message.guild.roles.size,
         data = [['Rank', 'RoleName']]
@@ -1838,6 +1835,19 @@ client.on('ready', () => {
          client.on('message', message => {
             if (message.content === 'باك') {
               message.channel.send(' وِلَكمِ بّـآك مِنٌوِر يّآ عَ ـسًسًـلَ:heart: ');
+               
+
+            }
+}); 
+
+
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+         client.on('message', message => {
+            if (message.content === '#invite') {
+              message.channel.send(' https://discordapp.com/api/oauth2/authorize?client_id=558613835435474954&permissions=8&scope=bot:heart: ');
                
 
             }
