@@ -248,7 +248,7 @@ ${prefix}inv ⥨ لدعوة البوت الى سيرفرك
 
 ${prefix}support ⥨ لدخول سيرفر الدعم
 
-رابط البوت:https://discordapp.com/api/oauth2/authorize?client_id=558613835435474954&permissions=8&scope=bot
+رابط البوت:https://discordapp.com/api/oauth2/authorize?client_id=558629373725376523&permissions=8&scope=bot
 
 
 	  `)
@@ -301,7 +301,7 @@ client.on('guildCreate', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("RED")
      .setTitle('Click Here To The Add Bot .!')
-     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=558613835435474954&permissions=8&scope=bot')
+     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=558629373725376523&permissions=8&scope=bot')
   .setDescription(`**
   Someone Added Me ✅
 اسم السيرفر: ${guild.name}
@@ -313,7 +313,7 @@ client.on('guildDelete', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("GOLD")
      .setTitle('Click Here To The Add Bot .!')
-     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=558613835435474954&permissions=8&scope=bot')
+     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=558629373725376523&permissions=8&scope=bot')
   .setDescription(`**
   I Got Kicked :cry:
 اسم السيرفر: ${guild.name}
@@ -809,7 +809,7 @@ client.on('message', message => {
                 if(message.content === prefix + "invite") {
                     let embed = new Discord.RichEmbed ()
                     embed.setTitle("**:point_right: Click Here**")
-                  .setFooter(`bot owner `,'https://discordapp.com/api/oauth2/authorize?client_id=558613835435474954&permissions=8&scope=bot
+                  .setFooter(`bot owner `,'https://discordapp.com/api/oauth2/authorize?client_id=558629373725376523&permissions=8&scope=bot
 ')
                   .setURL("https://goo.gl/ADmgeW");
                    message.channel.sendEmbed(embed);
